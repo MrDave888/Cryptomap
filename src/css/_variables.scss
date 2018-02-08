@@ -1,12 +1,17 @@
+// Imports //
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');
+
 // Colors //
 $bg-color: #e1b12c;
-$font-color: #2f3640;
+$content-color: #2f3640;
+$title-fonts: 'Rubik Mono One', sans-serif;
 
+// Mixins //
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  font: $font-color;
+  font: $content-color;
   background: $bg-color;
 }

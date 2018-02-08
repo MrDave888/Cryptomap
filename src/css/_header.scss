@@ -1,6 +1,37 @@
 .header-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   h1{
     font-size: 1.4em;
-    padding-left: 10%;
+    margin-left: 10%;
+    font-family: $title-fonts;
+  }
+  .header-actions{
+    margin-right: 10%;
+    select{
+      background: transparent;
+      color: $content-color;
+      height: 28px;
+      border: 1px solid $content-color;
+      border-radius: 2px;
+      margin: 0px 8px 0px 8px;
+      option{
+        background: $bg-color;
+        &hover{
+          background-color: $content-color;
+          color: $bg-color;
+        }
+      }
+    }
+    input{
+      background: transparent;
+      height: 20px;
+      border: 1px solid $content-color;
+      border-radius: 2px;
+      padding: 4px;
+      margin-left: 20px;
+    }
   }
 }
