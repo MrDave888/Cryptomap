@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
+import Markers from './Markers.js';
+
 export class MapContainer extends Component {
-
   render() {
-    return (
-      <Map
-        google={this.props.google}
-        zoom={10}
-        initialCenter={{
-          lat: 37.759,
-          lng: -122.428
-        }}
-      >
-      <Marker
-        name={'Dolores park'}
-        position={{lat: 37.759703, lng: -122.428093}} />
+    if(Object.getOwnPropertyNames(this.props.coinmap).length === 0){
+      return(
+        <div>
 
-      <Marker
-        name={'Dolores Square'}
-        position={{lat: 37.859703, lng: -122.528093}} />
+        </div>
+      )
+    }else{
+      return(
+        <Map
+          google={this.props.google}
+          zoom={10}
+          initialCenter={{
+            lat: 37.759,
+            lng: -122.428
+          }}
+        >
+        <Markers venues={this.props.coinmap.venues}/>
 
-      </Map>
-    );
+        </Map>
+      )
+    }
+
+
   }
 }
 

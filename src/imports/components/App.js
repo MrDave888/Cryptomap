@@ -18,11 +18,10 @@ export default class App extends Component {
   }
 
   render() {
-      console.log(this.props.coinmap)
     return (
       <div className="app-container">
         <Header />
-        <MapContainer venues={this.props.coinmap}/>
+        <MapContainer coinmap={this.props.coinmap}/>
       </div>
     );
   }
